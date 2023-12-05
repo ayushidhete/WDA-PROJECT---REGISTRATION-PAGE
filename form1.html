@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(202, 202, 214);
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(1, 1, 15, 0.5);
+            text-align: left;
+            /* max-width: 800px; */
+            margin: 50px auto;
+            border-radius: 5px;
+            /* height: 100vh; */
+            width: 42vw;
+
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #43419c;
+            color: #fff;
+            cursor: pointer;
+        }
+        #left-cont{
+            padding: 45px 70px;
+            text-align:20px;
+            width: 35vw;
+        }
+        #btn-group{
+            display: flex;
+            justify-content: center;
+        }
+        #btn{
+           padding: 15px 25px;
+           border-radius: 1.5rem;
+           font-size: larger;
+           font-weight: bold;
+           cursor: pointer;
+           transition: all 0.5s ease;
+            background-color:  #403f7a;
+            box-shadow: 0px 4px 6px black;
+        }
+        #btn:hover{
+            background-color: rgba(4, 4, 50, 0.5);
+            color:  white;
+            box-shadow: 0px 4px 6px white;
+        }
+        #img{
+            z-index: 100;
+            position: absolute;
+            height: 100px;
+            margin-left: 30%;
+            top: 22%;
+        }
+
+        #ryt-cont{
+            width: 43vw;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="left-cont">
+        <h1 style="color: rgb(45, 42, 115);">WELCOME TO SHARE & CARE</h1>
+        <h4>A website that promotes charity</h4>
+        <h4>REGISTER YOURSELF HERE</h4>
+        <span><img src="profile-icon.png" alt="profilr-pic" id="img"></span>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="fullName"> Your Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>    
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+
+
+    </div>
+    <div class="container" id="ryt-cont">
+        <div class="form-group">
+            <label for="role">Choose your field:</label>
+            <select id="role" name="role">
+                <option value="choose field">Choose feild</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="donor">Donor</option>
+                <option value="both">Volunteer & Donor</option>
+            </select>
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" placeholder="   * * * *   * * * *   * * * *    " required>
+        </div>
+
+        <div class="form-group">
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+
+            </select><br>
+            <label for="aadhar-upload">Upload Aadhar:</label>
+            <input type="file" id="aadhar-upload" name="aadhar-upload" accept=".jpg, .pdf" required>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Describe yourself here ...:</label>
+            <textarea id="description" name="description" rows="5" cols="75" required></textarea>
+        </div>
+
+        
+        <div class="container" style="width: 95%; ">
+            <label for="gender">Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+            </div>
+        </div>
+        <label for="notRobot">I'm not a Robot<input type="checkbox" id="notRobot"></label><br>
+        <div class="form-group" id="btn-group">
+           <button id="btn" type="submit" value="Submit"> Submit</button>
+           
+        </div>
+
+    </div>
+    </div>
+
+    </form>
+    </div>
+
+</body>
+
+</html>
